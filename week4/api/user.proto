@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package api;
+
+option go_package="https://github.com/zzflygo/homework/week4/api;api";
+
+message UserReq{
+ string name =1;
+}
+
+message UserRes{
+  string name =1;
+}
+
+service SearchService{
+  rpc Search(UserReq) returns (UserRes);
+}
