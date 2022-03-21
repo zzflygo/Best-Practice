@@ -33,10 +33,10 @@ func Wrapper(
 			return
 		}
 		c.Next()
-		if c.Writer.Status() != http.StatusOK {
-			s.RecordReqResult(false)
-		} else {
+		if c.Writer.Status() == http.StatusOK {
 			s.RecordReqResult(true)
+		} else {
+			s.RecordReqResult(false)
 		}
 	}
 

@@ -1,8 +1,9 @@
-package cmd
+package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"homework/week5/pkg/middleware"
+	"week5/pkg/middleware"
+
 	"net/http"
 	"time"
 )
